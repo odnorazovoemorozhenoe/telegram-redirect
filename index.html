@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting to Telegram</title>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
   <script>
-    window.onload = function () {
-      window.location = "tg://resolve?domain=durov";
-      setTimeout(() => {
-        window.location = "https://t.me/durov";
-      }, 200);
-    };
+    const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+    const mobileLink = "tg://resolve?domain=durov";
+    const webLink = "https://t.me/durov";
+    window.location.href = isMobile ? mobileLink : webLink;
   </script>
 </head>
 <body>
-  <p>Открываем Telegram…</p>
+  <p>Redirecting…</p>
 </body>
 </html>
