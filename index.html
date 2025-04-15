@@ -2,15 +2,23 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting…</title>
-  <script>
-    const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-    const mobileLink = "tg://resolve?domain=durov";
-    const webLink = "https://t.me/durov";
-    window.location.href = isMobile ? mobileLink : webLink;
-  </script>
+  <title>Go to Telegram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body {
+      height: 100%; margin: 0; display: flex;
+      align-items: center; justify-content: center;
+      font-family: sans-serif; flex-direction: column;
+    }
+    a {
+      font-size: 20px; padding: 12px 24px;
+      background: #0088cc; color: white;
+      border-radius: 8px; text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting…</p>
+  <p>Нажми кнопку, чтобы открыть Telegram</p>
+  <a href="tg://resolve?domain=durov">Открыть в Telegram</a>
 </body>
 </html>
