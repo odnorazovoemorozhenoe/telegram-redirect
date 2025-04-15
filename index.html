@@ -2,18 +2,15 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Redirecting…</title>
+  <script>
+    const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+    const mobileLink = "tg://resolve?domain=durov";
+    const webLink = "https://t.me/durov";
+    window.location.href = isMobile ? mobileLink : webLink;
+  </script>
 </head>
 <body>
-  <p>Redirecting to Telegram...</p>
-  <a id="tgLink" href="tg://resolve?domain=durov" style="display:none;">Open TG</a>
-  <script>
-    window.onload = () => {
-      document.getElementById("tgLink").click();
-      setTimeout(() => {
-        window.location.href = "https://t.me/durov";
-      }, 400);
-    };
-  </script>
+  <p>Redirecting…</p>
 </body>
 </html>
