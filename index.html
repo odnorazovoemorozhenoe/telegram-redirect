@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecting…</title>
-  <script>
-    const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-    const mobileLink = "tg://resolve?domain=durov";
-    const webLink = "https://t.me/durov";
-    window.location.href = isMobile ? mobileLink : webLink;
-  </script>
-</head>
-<body>
-  <p>Redirecting…</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting to Telegram…</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      const mobileLink = "tg://resolve?domain=durov";
+      const desktopLink = "https://t.me/durov";
+
+      const isMobile = /android|iphone|ipad|ipod|windows phone/i.test(navigator.userAgent);
+
+      window.location.href = isMobile ? mobileLink : desktopLink;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to Telegram…</p>
+  </body>
 </html>
